@@ -46,7 +46,10 @@ def preorder(root) -> None:
 
 def postorder(root) -> None:
     # Write your code here
-
+    if root:
+        postorder(root.left_child)
+        postorder(root.right_child)
+        print(root.data, end = " ")
 
 # Do not change the following code
 input_data = input()
