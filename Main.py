@@ -39,7 +39,10 @@ def inorder(root) -> None:
 
 def preorder(root) -> None:
     # Write your code here
-
+    if root:
+        print(root.data, end = " ")
+        preorder(root.left_child)
+        preorder(root.right_child)
 
 def postorder(root) -> None:
     # Write your code here
